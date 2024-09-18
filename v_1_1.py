@@ -101,27 +101,17 @@ while run:
     if Menu_Status:
         screen.fill(initial_bg_values)
 
-        title_font = pygame.font.Font(None, 72)  # Fuente más grande para el título
-        text_Menu = title_font.render("Menú Principal", True, (255, 255, 255))
-        text_rect = text_Menu.get_rect(center=(screen.get_width() // 2, 150))
+        text_Menu = font.render("Menu Generico \n O opciones \n P jugar", True, (255, 255, 255))
+        text_rect = text_Menu.get_rect(x=100,y=300)
         screen.blit(text_Menu, text_rect)
 
-        # Texto de opciones
-        font_options = pygame.font.Font(None, 48)
-        text_options = font_options.render("O - Opciones", True, (255, 255, 255))
-        text_options_rect = text_options.get_rect(center=(screen.get_width() // 2, 300))
-        screen.blit(text_options, text_options_rect)
-
-        text_play = font_options.render("P - Jugar", True, (255, 255, 255))
-        text_play_rect = text_play.get_rect(center=(screen.get_width() // 2, 350))
-        screen.blit(text_play, text_play_rect)
-
         keym = pygame.key.get_pressed()
-        if keym[pygame.K_o]:
+        if keym[pygame.K_o] == True:
             Menu_Status = False
             Settings_Status = True
-        if keym[pygame.K_p]:
+        if keym[pygame.K_p] == True:
             Menu_Status = False
+            Setter
             Game_Status = True
 
     if Settings_Status:
