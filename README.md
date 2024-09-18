@@ -86,6 +86,7 @@ El código está estructurado en varias clases y funciones clave:
 - `O`: Accede a la configuración.
 
 ## Requisitos
-
+**IMPORTANTE**
+Para utilizar la fuente que se incluye se debe cambiar el path a la ruta en la que se clone el repositorio
 - Python 3.x
 - Pygame (se puede instalar con `pip install pygame`)
